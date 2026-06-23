@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>โค้ดโปร — สอนเขียนโค้ด จากศูนย์ สู่งานจริง</title>
+  <link rel="stylesheet" href="landingpage.css" />
+</head>
+<body>
+
+<!-- ============================================================
+  landingpage.html — โค้ดโปร Coding Bootcamp
+  ────────────────────────────────────────────────────────────
+  โครงสร้างหน้า (เรียงจากบนลงล่าง):
+
+    [NAV]     แถบนำทาง (fixed)
+    [1] HERO      ดึงความสนใจใน 3 วินาที
+    [2] PROBLEM   เปิดเผย Pain Point
+    [3] SOLUTION  วิธีที่เราแก้ปัญหา
+    [4] BENEFITS  ผลลัพธ์ที่ได้
+    [5] SERVICES  หลักสูตรที่เปิดสอน
+    [6] PROOF     สถิติ + รีวิวจากผู้เรียน
+    [7] CTA       ปิดการขาย
+    [8] FOOTER    ลิงก์รองและลิขสิทธิ์
+
+  ป้ายสีเหลือง (.annotation) คือไฮไลท์ชื่อ section
+  ซ่อนอัตโนมัติบนหน้าจอ < 900px
+  ════════════════════════════════════════════════════════════ -->
+
+
+<!-- ════════════════════════════════════════════════════════════
+     NAV — แถบนำทาง
+     แก้ไข: โลโก้ | ลิงก์เมนู | ปุ่มขวา
+     ════════════════════════════════════════════════════════════ -->
+<nav class="navbar">
+  <div class="navbar__inner">
+
+    <div class="navbar__logo">โค้ดโปร.</div><!-- ← แก้ชื่อแบรนด์ -->
+
+    <div class="navbar__links">
+      <a href="#problem">ปัญหา</a>
+      <a href="#solution">วิธีสอน</a>
+      <a href="#services">หลักสูตร</a>
+      <a href="#proof">รีวิว</a>
+    </div>
+
+    <a href="#cta" class="btn-nav">สมัครเรียน</a><!-- ← แก้ข้อความปุ่ม -->
+
+  </div>
+</nav>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     [1] HERO SECTION
+     ────────────────────────────────────────────────────────
+     จุดประสงค์ : ดึงความสนใจใน 3 วินาทีแรก
+     องค์ประกอบ : แท็กประกาศ · H1 · ข้อความรอง · ปุ่ม CTA · mockup
+     ════════════════════════════════════════════════════════════ -->
+<section id="hero" class="section">
+  <div class="section-inner">
+
+    <!-- ป้ายไฮไลท์ชื่อ section (ซ่อนบนมือถือ) -->
+    <div class="annotation annotation--right">
+      <div class="annotation__label">1. ส่วน Hero</div>
+      <div class="annotation__purpose">ดึงความสนใจใน 3 วินาที</div>
+      <hr class="annotation__divider" /> <!-- เส้นคั่น -->
+      <ul class="annotation__elements">
+        <li>หัวเรื่องหลัก (H1)</li>
+        <li>หัวเรื่องรอง</li>
+        <li>ปุ่ม CTA</li>
+        <li>ภาพ mockup</li>
+      </ul>
+    </div>
+
+    <!-- แท็กประกาศ -->
+    <div class="hero__pill">
+      💻 เปิดรับรุ่นที่ 8 — เหลือที่ว่าง 12 ที่นั่ง<!-- ← แก้ข้อความประกาศ -->
+    </div>
+
+    <!-- H1 หัวข้อหลัก -->
+    <h1 class="fade-in">
+      สอนเขียนโค้ด<br>
+      <span style="color:var(--primary)">จากศูนย์ สู่งานจริง</span><!-- ← แก้ slogan -->
+    </h1>
+
+    <!-- ข้อความรองอธิบาย -->
+    <p class="hero__sub fade-in fade-in--delay-1">
+      หลักสูตรเขียนโค้ดแบบ Project-Based Learning สอนโดย Developer มืออาชีพที่ทำงานจริงในอุตสาหกรรม
+      จบแล้วมี Portfolio พร้อมสมัครงานได้ทันที<!-- ← แก้ข้อความรอง -->
+    </p>
+
+    <!-- ปุ่ม CTA หลัก -->
+    <div class="btn-group fade-in fade-in--delay-2">
+      <a href="#services" class="btn btn--primary">ดูหลักสูตรทั้งหมด →</a><!-- ← แก้ข้อความปุ่มหลัก -->
+      <a href="#cta"      class="btn btn--outline">ลองเรียนฟรี 7 วัน</a><!-- ← แก้ข้อความปุ่มรอง -->
+    </div>
+
+    <!-- รายการ ✓ ด้านล่างปุ่ม -->
+    <div class="hero__checklist fade-in fade-in--delay-3">
+      <span>ไม่ต้องมีพื้นฐาน</span><!-- ← แก้รายการ -->
+      <span>Mentor ดูแลตลอด</span>
+    </div>
+
+    <!-- กล่อง mockup / ภาพ dashboard -->
+    <div class="hero__mockup fade-in fade-in--delay-3">
+      <div class="hero__mockup-label">
+        <strong>const dev = you.learnWith("โค้ดโปร");</strong>
+        ← ใส่ภาพ screenshot หรือวิดีโอสาธิตที่นี่<!-- ← แทนด้วย <img> จริง -->
+      </div>
+    </div>
+
+  </div>
+</section><!-- end #hero -->
+
+
+<!-- ════════════════════════════════════════════════════════════
+     [2] PROBLEM SECTION
+     ────────────────────────────────────────────────────────
+     จุดประสงค์ : ให้ผู้ชมรู้สึกว่า "นี่คือฉัน"
+     องค์ประกอบ : headline · ข้อความรอง · 3 การ์ดปัญหา
+     ════════════════════════════════════════════════════════════ -->
+<section id="problem" class="section section--alt">
+  <div class="section-inner">
+
+    <div class="annotation annotation--left">
+      <div class="annotation__label">2. ส่วนปัญหา</div>
+      <div class="annotation__purpose">เปิดเผย Pain Point</div>
+      <hr class="annotation__divider" />
+      <ul class="annotation__elements">
+        <li>ปัญหาที่เกี่ยวข้อง</li>
+        <li>ขยายความเจ็บปวด</li>
+        <li>ต้นทุนที่เสียไป</li>
+      </ul>
+    </div>
+
+    <!-- Headline กลาง -->
+    <div class="section-intro fade-in">
+      <h2>อยากเขียนโค้ดเป็น<br>แต่ไม่รู้จะเริ่มจากไหน?</h2><!-- ← แก้ headline -->
+      <p>คนที่อยากเรียนโค้ดส่วนใหญ่ล้มเลิกกลางทางเพราะปัญหาเหล่านี้</p><!-- ← แก้ข้อความรอง -->
+    </div>
+
+    <!-- 3 การ์ดปัญหา — ใส่เพิ่ม/ลดการ์ดได้ตามต้องการ -->
+    <div class="grid-3">
+
+      <!-- การ์ดที่ 1 -->
+      <div class="problem-card fade-in">
+        <div class="problem-icon">📺</div><!-- ← แก้ icon (emoji) -->
+        <h3>เรียนจาก YouTube แล้วสับสน</h3><!-- ← แก้หัวเรื่องปัญหา -->
+        <p>เนื้อหาบน YouTube มีมากเกินไป ไม่รู้ว่าควรเรียนอะไรก่อนหลัง เรียนเสร็จแล้วก็ยังทำโปรเจกต์เองไม่ได้</p>
+      </div>
+
+      <!-- การ์ดที่ 2 -->
+      <div class="problem-card fade-in fade-in--delay-1">
+        <div class="problem-icon">💻</div>
+        <h3>เขียนโค้ดได้แต่ทำงานจริงไม่ได้</h3>
+        <p>เรียนจบ Bootcamp อื่นมา แต่พอสัมภาษณ์งานจริง ทำโปรเจกต์จริงไม่ได้ เพราะไม่เคยทำงานในทีม</p>
+      </div>
+
+      <!-- การ์ดที่ 3 -->
+      <div class="problem-card fade-in fade-in--delay-2">
+        <div class="problem-icon">📄</div>
+        <h3>ไม่มี Portfolio ที่ดึงดูดงาน</h3>
+        <p>นายจ้างต้องการเห็นผลงาน แต่ไม่รู้จะสร้าง Portfolio อย่างไร ส่ง Resume ไปเท่าไหร่ก็ไม่ได้รับการติดต่อกลับ</p>
+      </div>
+
+    </div>
+  </div>
+</section><!-- end #problem -->
+
+
+<!-- ════════════════════════════════════════════════════════════
+     [3] SOLUTION SECTION
+     ────────────────────────────────────────────────────────
+     จุดประสงค์ : ช่วง "เข้าใจแล้ว!" — อธิบายวิธีแก้ปัญหา
+     องค์ประกอบ : แท็ก · H2 · ข้อความ · checklist · ภาพด้านขวา
+     ════════════════════════════════════════════════════════════ -->
+<section id="solution" class="section">
+  <div class="section-inner">
+
+    <div class="annotation annotation--right">
+      <div class="annotation__label">3. ส่วนทางออก</div>
+      <div class="annotation__purpose">ช่วง "เข้าใจแล้ว!"</div>
+      <hr class="annotation__divider" />
+      <ul class="annotation__elements">
+        <li>คุณค่าหลัก</li>
+        <li>ภาพอธิบาย</li>
+        <li>เปรียบกับปัญหา</li>
+      </ul>
+    </div>
+
+    <div class="grid-2">
+
+      <!-- คอลัมน์ซ้าย: ข้อความ -->
+      <div class="fade-in">
+        <div class="solution__tag">วิธีสอนของโค้ดโปร</div><!-- ← แก้แท็ก -->
+        <h2>สอนผ่านโปรเจกต์จริง<br>ไม่ใช่แค่ทฤษฎี</h2><!-- ← แก้ headline -->
+        <p style="margin-top:16px; font-size:1.1rem;">
+          ทุกสัปดาห์คุณจะได้สร้างโปรเจกต์จริง ตั้งแต่วันแรก พร้อม Code Review จาก Mentor
+          ที่ทำงานในบริษัทเทคจริงๆ<!-- ← แก้ข้อความอธิบาย -->
+        </p>
+        <!-- checklist ด้านล่าง — เพิ่ม/ลด <li> ได้ -->
+        <ul class="solution__list">
+          <li><span class="solution__check">✓</span> เรียนผ่านโปรเจกต์จริงทุกสัปดาห์</li>
+          <li><span class="solution__check">✓</span> Code Review ทุก PR โดย Senior Developer</li>
+          <li><span class="solution__check">✓</span> ฝึก Git, Teamwork และ Agile เหมือนทำงานจริง</li>
+        </ul>
+      </div>
+
+      <!-- คอลัมน์ขวา: ภาพ / วิดีโอ -->
+      <div class="solution__visual fade-in fade-in--delay-1">
+        <!-- ← แทนด้วย <img src="..."> หรือ <video> จริง -->
+        <div>
+          <strong>Project Roadmap</strong><!-- ← แก้หัวเรื่องภาพ -->
+          Week 1: สร้าง To-do App<br>
+          Week 2: REST API + Database<br>
+          Week 3: Full-stack App<br>
+          Week 4: Deploy to Production
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section><!-- end #solution -->
+
+
+<!-- ════════════════════════════════════════════════════════════
+     [4] BENEFITS SECTION
+     ────────────────────────────────────────────────────────
+     จุดประสงค์ : แสดงผลลัพธ์ที่ได้ ไม่ใช่แค่ features
+     องค์ประกอบ : headline · 3 การ์ดประโยชน์
+     ════════════════════════════════════════════════════════════ -->
+<section id="benefits" class="section">
+  <div class="section-inner">
+
+    <div class="annotation annotation--left">
+      <div class="annotation__label">4. ส่วนประโยชน์</div>
+      <div class="annotation__purpose">ผลลัพธ์ที่ได้ ไม่ใช่แค่ Features</div>
+      <hr class="annotation__divider" />
+      <ul class="annotation__elements">
+        <li>ผลประโยชน์เน้นผู้ใช้</li>
+        <li>ผลลัพธ์ที่วัดได้</li>
+        <li>ไอคอนประกอบ</li>
+      </ul>
+    </div>
+
+    <!-- Headline กลาง -->
+    <div class="section-intro fade-in">
+      <h2>จบแล้วได้อะไรบ้าง?</h2><!-- ← แก้ headline -->
+      <p>ผลลัพธ์ที่ผู้เรียนโค้ดโปรรุ่นที่ผ่านมาได้รับจริง</p><!-- ← แก้ข้อความรอง -->
+    </div>
+
+    <!-- 3 การ์ดประโยชน์ -->
+    <div class="grid-3">
+
+      <!-- ประโยชน์ที่ 1 -->
+      <div class="benefit-card fade-in">
+        <div class="benefit-icon">🗂</div><!-- ← แก้ icon -->
+        <h3>Portfolio 3–5 โปรเจกต์</h3><!-- ← แก้หัวข้อ -->
+        <p>จบแล้วมีผลงานจริงบน GitHub ที่นายจ้างดูแล้วเข้าใจความสามารถได้ทันที</p>
+      </div>
+
+      <!-- ประโยชน์ที่ 2 -->
+      <div class="benefit-card fade-in fade-in--delay-1">
+        <div class="benefit-icon">💼</div>
+        <h3>78% หางานได้ใน 3 เดือน</h3>
+        <p>ผู้เรียนที่จบหลักสูตรโค้ดโปรหางานได้ภายใน 3 เดือนหลังเรียนจบ</p>
+      </div>
+
+      <!-- ประโยชน์ที่ 3 -->
+      <div class="benefit-card fade-in fade-in--delay-2">
+        <div class="benefit-icon">🤝</div>
+        <h3>เครือข่าย Developer จริง</h3>
+        <p>เข้าร่วม Community ผู้เรียนและ Mentor ที่ทำงานในบริษัทเทคชั้นนำ</p>
+      </div>
+
+    </div>
+  </div>
+</section><!-- end #benefits -->
+
+
+<!-- ════════════════════════════════════════════════════════════
+     [5] SERVICES SECTION
+     ────────────────────────────────────────────────────────
+     จุดประสงค์ : แสดงหลักสูตรที่เปิดสอน (สิ่งที่อยู่ในกล่อง)
+     องค์ประกอบ : headline · 6 การ์ดหลักสูตร
+     ════════════════════════════════════════════════════════════ -->
+<section id="services" class="section section--alt">
+  <div class="section-inner">
+
+    <div class="annotation annotation--right">
+      <div class="annotation__label">5. ส่วนบริการ</div>
+      <div class="annotation__purpose">สิ่งที่อยู่ในกล่องจริงๆ</div>
+      <hr class="annotation__divider" />
+      <ul class="annotation__elements">
+        <li>ความสามารถเฉพาะ</li>
+        <li>การ์ด Feature</li>
+        <li>คำอธิบายชัดเจน</li>
+      </ul>
+    </div>
+
+    <!-- Headline ชิดซ้าย -->
+    <div class="services__header fade-in">
+      <h2>หลักสูตรที่เปิดสอน</h2><!-- ← แก้ headline -->
+      <p>ทุกหลักสูตรเน้น Project-Based เรียนจบแล้วทำงานได้จริง</p><!-- ← แก้ข้อความรอง -->
+    </div>
+
+    <!-- 6 การ์ดหลักสูตร — เพิ่ม/ลด/แก้ไขได้ -->
+    <div class="grid-services">
+
+      <div class="service-card fade-in">
+        <h3>Frontend Development</h3><!-- ← แก้ชื่อหลักสูตร -->
+        <p>HTML, CSS, JavaScript, React — สร้างเว็บสวยงามและใช้งานได้จริง เน้น UX/UI และ Responsive Design</p>
+        <div class="service-card__more">ดูรายละเอียด →</div>
+      </div>
+
+      <div class="service-card fade-in fade-in--delay-1">
+        <h3>Backend Development</h3>
+        <p>Node.js, Python, REST API, Database — สร้าง Server และจัดการข้อมูลอย่างมืออาชีพ</p>
+        <div class="service-card__more">ดูรายละเอียด →</div>
+      </div>
+
+      <div class="service-card fade-in fade-in--delay-2">
+        <h3>Full Stack Bootcamp</h3>
+        <p>ครอบคลุมทั้ง Frontend + Backend + Deployment เหมาะสำหรับคนที่ต้องการเป็น Developer เต็มตัว</p>
+        <div class="service-card__more">ดูรายละเอียด →</div>
+      </div>
+
+      <div class="service-card fade-in">
+        <h3>Data Science & Python</h3>
+        <p>Python, Pandas, Machine Learning พื้นฐาน สำหรับคนที่สนใจด้านข้อมูลและ AI</p>
+        <div class="service-card__more">ดูรายละเอียด →</div>
+      </div>
+
+      <div class="service-card fade-in fade-in--delay-1">
+        <h3>Mobile App (React Native)</h3>
+        <p>สร้างแอปมือถือ iOS และ Android ด้วย React Native ใช้โค้ดชุดเดียวกัน</p>
+        <div class="service-card__more">ดูรายละเอียด →</div>
+      </div>
+
+      <div class="service-card fade-in fade-in--delay-2">
+        <h3>DevOps & Cloud</h3>
+        <p>Docker, CI/CD, AWS/GCP พื้นฐาน สำหรับ Developer ที่ต้องการ Deploy งานเป็น</p>
+        <div class="service-card__more">ดูรายละเอียด →</div>
+      </div>
+
+    </div>
+  </div>
+</section><!-- end #services -->
+
+
+<!-- ════════════════════════════════════════════════════════════
+     [6] PROOF SECTION
+     ────────────────────────────────────────────────────────
+     จุดประสงค์ : สร้างความน่าเชื่อถือด้วยหลักฐาน
+     องค์ประกอบ : แถวสถิติ 3 ตัว · 2 การ์ดรีวิว
+     ════════════════════════════════════════════════════════════ -->
+<section id="proof" class="section">
+  <div class="section-inner">
+
+    <div class="annotation annotation--left">
+      <div class="annotation__label">6. ส่วนหลักฐาน</div>
+      <div class="annotation__purpose">สร้างความน่าเชื่อถือ</div>
+      <hr class="annotation__divider" />
+      <ul class="annotation__elements">
+        <li>รีวิวจากผู้เรียน</li>
+        <li>ตัวเลขสถิติ</li>
+        <li>ชื่อ-บริษัทจริง</li>
+      </ul>
+    </div>
+
+    <!-- แถวสถิติ — แก้ตัวเลขและป้ายกำกับ -->
+    <div class="stats-bar fade-in">
+      <div class="stat">
+        <span class="stat__number">1,200+</span><!-- ← แก้ตัวเลข -->
+        <span class="stat__label">ผู้เรียนที่จบหลักสูตร</span><!-- ← แก้ป้ายกำกับ -->
+      </div>
+      <div class="stat">
+        <span class="stat__number">78%</span>
+        <span class="stat__label">หางานได้ใน 3 เดือน</span>
+      </div>
+      <div class="stat">
+        <span class="stat__number">4.9/5</span>
+        <span class="stat__label">คะแนนรีวิวเฉลี่ย</span>
+      </div>
+    </div>
+
+    <!-- 2 การ์ดรีวิว — เพิ่ม/ลด/แก้ข้อความได้ -->
+    <div class="testimonials">
+
+      <!-- รีวิวที่ 1 -->
+      <div class="testimonial-card fade-in">
+        <div class="stars">★★★★★</div>
+        <blockquote>
+          "ก่อนเรียนไม่รู้ว่า if-else คืออะไรเลย พอจบหลักสูตร Full Stack ได้งานที่ Startup
+          เงินเดือน 45,000 บาท Mentor สอนดีมาก Code Review ทุก PR ทำให้เก่งเร็วมากครับ"
+          <!-- ← แก้ข้อความรีวิว -->
+        </blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar"></div><!-- ← ใส่ <img> รูปโปรไฟล์จริง -->
+          <div>
+            <div class="testimonial-name">ธนภัทร อินทร์สุข</div><!-- ← แก้ชื่อ -->
+            <div class="testimonial-role">Junior Developer ที่ TechStartup Bangkok</div><!-- ← แก้ตำแหน่ง -->
+          </div>
+        </div>
+      </div>
+
+      <!-- รีวิวที่ 2 -->
+      <div class="testimonial-card fade-in fade-in--delay-1">
+        <div class="stars">★★★★★</div>
+        <blockquote>
+          "เคยลองเรียนจาก Udemy มาก่อนแต่ไม่ได้ผล พอมาเรียนโค้ดโปรมี Mentor คอยดูแล
+          ทำโปรเจกต์จริงทุกสัปดาห์ จบมา 2 เดือนได้งาน Frontend ที่บริษัทใหญ่เลยค่ะ"
+        </blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar"></div>
+          <div>
+            <div class="testimonial-name">พิมพ์ชนก ศรีสุข</div>
+            <div class="testimonial-role">Frontend Developer ที่ Agoda</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section><!-- end #proof -->
+
+
+<!-- ════════════════════════════════════════════════════════════
+     [7] CTA SECTION  (Call to Action)
+     ────────────────────────────────────────────────────────
+     จุดประสงค์ : ผลักดันให้ตัดสินใจขั้นสุดท้าย
+     องค์ประกอบ : H2 ปิดการขาย · ข้อความรอง · ฟอร์มอีเมล
+     ════════════════════════════════════════════════════════════ -->
+<section id="cta">
+  <div class="container" style="position:relative; padding-top:96px; padding-bottom:96px;">
+
+    <div class="annotation annotation--right" style="top:108px;">
+      <div class="annotation__label">7. ส่วน CTA</div>
+      <div class="annotation__purpose">ผลักดันให้ตัดสินใจ</div>
+      <hr class="annotation__divider" />
+      <ul class="annotation__elements">
+        <li>หัวเรื่องปิดการขาย</li>
+        <li>ขั้นตอนถัดไปชัดเจน</li>
+        <li>ลด Friction</li>
+      </ul>
+    </div>
+
+    <div class="cta-box fade-in">
+
+      <!-- H2 ปิดการขาย -->
+      <h2>พร้อมเริ่มต้นเป็น<br>Developer แล้วหรือยัง?</h2><!-- ← แก้ headline -->
+
+      <!-- ข้อความอธิบายสั้น -->
+      <p>เริ่มด้วยการทดลองเรียนฟรี 7 วัน ไม่ต้องใช้บัตรเครดิต เรียนได้เลยทันทีหลังสมัคร</p><!-- ← แก้ข้อความ -->
+
+      <!-- ฟอร์มอีเมล -->
+      <form class="cta-form" onsubmit="return false;">
+        <input type="email" placeholder="กรอกอีเมลของคุณ" /><!-- ← แก้ placeholder -->
+        <button type="submit" class="btn btn--dark">เริ่มเรียนเลย</button><!-- ← แก้ข้อความปุ่ม -->
+      </form>
+
+      <!-- หมายเหตุใต้ฟอร์ม -->
+      <p class="cta-note">ทดลองเรียนฟรี 7 วัน ไม่ต้องจ่าย ยกเลิกได้ตลอดเวลา</p><!-- ← แก้หมายเหตุ -->
+
+    </div>
+  </div>
+</section><!-- end #cta -->
+
+
+<!-- ════════════════════════════════════════════════════════════
+     [8] FOOTER SECTION
+     ────────────────────────────────────────────────────────
+     จุดประสงค์ : ลิงก์นำทางรองและข้อมูลกฎหมาย
+     องค์ประกอบ : โลโก้ · 3 คอลัมน์ลิงก์ · แถบลิขสิทธิ์
+     ════════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+
+    <div class="annotation annotation--left">
+      <div class="annotation__label">8. ส่วน Footer</div>
+      <div class="annotation__purpose">ลิงก์รองและลิขสิทธิ์</div>
+      <hr class="annotation__divider" />
+      <ul class="annotation__elements">
+        <li>โลโก้/แบรนด์</li>
+        <li>ลิงก์นำทาง</li>
+        <li>ลิขสิทธิ์/โซเชียล</li>
+      </ul>
+    </div>
+
+    <div class="footer-grid">
+
+      <!-- คอลัมน์แบรนด์ (กว้าง 2x) -->
+      <div class="footer-brand">
+        <div class="footer-logo">โค้ดโปร.</div><!-- ← แก้ชื่อแบรนด์ -->
+        <p>สอนเขียนโค้ดจากศูนย์สู่งานจริง ด้วยระบบ Project-Based Learning และ Mentor มืออาชีพ</p><!-- ← แก้ข้อความ -->
+      </div>
+
+      <!-- คอลัมน์ลิงก์ 1 -->
+      <div class="footer-col">
+        <h4>หลักสูตร</h4><!-- ← แก้หัวข้อคอลัมน์ -->
+        <ul>
+          <li><a href="#">Frontend</a></li><!-- ← แก้/เพิ่ม/ลดลิงก์ -->
+          <li><a href="#">Backend</a></li>
+          <li><a href="#">Full Stack</a></li>
+          <li><a href="#">Data Science</a></li>
+        </ul>
+      </div>
+
+      <!-- คอลัมน์ลิงก์ 2 -->
+      <div class="footer-col">
+        <h4>แหล่งข้อมูล</h4>
+        <ul>
+          <li><a href="#">บทความ</a></li>
+          <li><a href="#">วิดีโอฟรี</a></li>
+          <li><a href="#">Roadmap</a></li>
+          <li><a href="#">Community</a></li>
+        </ul>
+      </div>
+
+      <!-- คอลัมน์ลิงก์ 3 -->
+      <div class="footer-col">
+        <h4>โค้ดโปร</h4>
+        <ul>
+          <li><a href="#">เกี่ยวกับเรา</a></li>
+          <li><a href="#">ทีม Mentor</a></li>
+          <li><a href="#">ติดต่อ</a></li>
+          <li><a href="#">นโยบาย</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- แถบลิขสิทธิ์ด้านล่าง -->
+    <div class="footer-bottom">
+      <span>© 2026 โค้ดโปร สงวนลิขสิทธิ์</span><!-- ← แก้ปีและชื่อบริษัท -->
+      <div class="footer-social">
+        <a href="#">Facebook</a><!-- ← แก้/เพิ่มลิงก์โซเชียล -->
+        <a href="#">Discord</a>
+        <a href="#">GitHub</a>
+       
+      </div>
+    </div>
+
+  </div>
+</footer><!-- end footer -->
+
+
+<!-- ════════════════════════════════════════════════════════════
+     JAVASCRIPT — Scroll Fade-in Animation อนิเมชั่น
+     (ไม่ต้องแก้ไขส่วนนี้)
+     ════════════════════════════════════════════════════════════ -->
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    },
+    { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+  );
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
